@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Transit Compare</string>
+    <string name="springfield_to_boston">Springfield to Boston</string>
+    <string name="departure_on_thursday_6_13">Departure on Thursday, 6/13</string>
+    <string name="chiku_s_advice">Chiku\'s advice</string>
+    <string name="book_now">Book now</string>
+    <string name="prices_might_increase_in_the_next_15_days">Prices might increase in the next 15 days.</string>
+</resources>

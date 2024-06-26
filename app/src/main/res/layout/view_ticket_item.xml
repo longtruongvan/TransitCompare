@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<carbon.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/spacing_extra_16dp"
+    android:background="@android:color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/spacing_extra_16dp"
+    app:carbon_cornerRadius="@dimen/cornerRadius_12dp"
+    app:carbon_stroke="#D7DEE6"
+    app:carbon_strokeWidth="1dp">
+
+    <include layout="@layout/view_title_ticket" />
+
+    <include
+        layout="@layout/view_travel_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/spacing_extra_16dp" />
+
+    <include layout="@layout/view_ticket_options" />
+
+    <include
+        android:id="@+id/view_detail_ticket"
+        layout="@layout/view_detail_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</carbon.widget.LinearLayout>

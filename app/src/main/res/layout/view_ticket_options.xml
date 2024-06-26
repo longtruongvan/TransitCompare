@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <carbon.widget.LinearLayout
+        android:id="@+id/button_details"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_extra_16dp"
+        android:layout_marginTop="@dimen/spacing_extra_16dp"
+        android:background="#D8F2F7"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/spacing_extra_16dp"
+        android:paddingVertical="@dimen/spacing_extra_8dp"
+        app:carbon_cornerRadius="@dimen/size_20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details"
+            android:textColor="#438B9E"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold" />
+
+
+        <ImageView
+            android:id="@+id/ic_down_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rotation="0"
+            android:layout_marginStart="12dp"
+            android:src="@android:drawable/arrow_down_float" />
+    </carbon.widget.LinearLayout>
+
+    <carbon.widget.LinearLayout
+        android:layout_width="@dimen/size_125dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_extra_16dp"
+        android:layout_marginTop="@dimen/spacing_extra_16dp"
+        android:background="#EAEBEC"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/spacing_extra_16dp"
+        android:paddingVertical="@dimen/spacing_extra_8dp"
+        app:carbon_cornerRadius="@dimen/size_20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 tranfers"
+            android:textColor="#727882"
+            android:textSize="@dimen/text_16sp"
+            android:textStyle="bold" />
+
+    </carbon.widget.LinearLayout>
+</LinearLayout>

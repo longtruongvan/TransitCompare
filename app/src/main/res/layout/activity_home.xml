@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F7F9"
+    android:paddingBottom="@dimen/spacing_extra_16dp"
+    tools:context=".presentation.home.view.HomeActivity">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/view_app_bar" />
+
+    <include
+        android:id="@+id/option_filters"
+        layout="@layout/view_option_filters"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/elevation_8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbar" />
+
+    <carbon.widget.LinearLayout
+        android:id="@+id/divider1"
+        app:carbon_elevation="@dimen/elevation_1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/option_filters"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="@dimen/size_1dp"/>
+
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_extra_16dp"
+        android:layout_marginTop="@dimen/spacing_extra_8dp"
+        android:text="@string/chiku_s_advice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+
+    <TextView
+        android:id="@+id/text_2"
+        style="@style/Title.Small.Bold"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_extra_16dp"
+        android:layout_marginTop="@dimen/spacing_extra_8dp"
+        android:text="@string/book_now"
+        android:textColor="#56BCD2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_1" />
+
+    <TextView
+        android:id="@+id/text_3"
+        android:layout_width="@dimen/size_0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_extra_16dp"
+        android:layout_marginTop="@dimen/spacing_extra_8dp"
+        android:text="@string/prices_might_increase_in_the_next_15_days"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_2" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_ticket"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_0dp"
+        android:layout_marginHorizontal="@dimen/spacing_extra_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_3"
+        tools:listitem="@layout/view_ticket_item" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

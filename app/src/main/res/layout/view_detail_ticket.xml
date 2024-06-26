@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/spacing_extra_16dp">
+
+    <TextView
+        android:id="@+id/time_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="11:15a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <carbon.widget.LinearLayout
+        android:id="@+id/point_start"
+        android:layout_width="@dimen/size_20dp"
+        android:layout_height="@dimen/size_20dp"
+        android:layout_marginHorizontal="@dimen/spacing_extra_8dp"
+        android:background="@android:color/black"
+        app:carbon_cornerRadius="@dimen/size_50dp"
+        app:layout_constraintStart_toEndOf="@id/time_start"
+        app:layout_constraintTop_toTopOf="@id/time_start" />
+
+
+    <TextView
+        android:id="@+id/departure_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_extra_8dp"
+        android:text="Springfield, MA"
+        app:layout_constraintStart_toEndOf="@id/point_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/departure_location_description1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peter Pan Lines $16.00"
+        app:layout_constraintStart_toStartOf="@id/departure_location"
+        app:layout_constraintTop_toBottomOf="@id/departure_location" />
+
+    <TextView
+        android:id="@+id/departure_location_description2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Springfield"
+        app:layout_constraintStart_toStartOf="@id/departure_location"
+        app:layout_constraintTop_toBottomOf="@id/departure_location_description1" />
+
+
+    <ImageView
+        android:layout_width="@dimen/size_30dp"
+        android:layout_height="@dimen/size_30dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/time_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_50dp"
+        android:layout_marginBottom="@dimen/size_50dp"
+        android:gravity="end"
+        android:paddingRight="@dimen/spacing_extra_8dp"
+        android:text="1 trsf\nbus\n2h 45m"
+        android:textColor="#68A5B4"
+        app:layout_constraintBottom_toTopOf="@id/time_end"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@id/point_start" />
+
+    <TextView
+        android:id="@+id/time_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2:00p"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+
+    <carbon.widget.LinearLayout
+        android:id="@+id/point_end"
+        android:layout_width="@dimen/size_20dp"
+        android:layout_height="@dimen/size_20dp"
+        android:layout_marginHorizontal="@dimen/spacing_extra_8dp"
+        android:background="@android:color/black"
+        app:carbon_cornerRadius="@dimen/size_50dp"
+        app:layout_constraintBottom_toBottomOf="@id/time_end"
+        app:layout_constraintEnd_toEndOf="@id/point_start"
+        app:layout_constraintStart_toStartOf="@id/point_start" />
+
+    <View
+        android:id="@+id/guideline"
+        android:layout_width="@dimen/size_3dp"
+        android:layout_height="@dimen/size_170dp"
+        android:background="@android:color/black"
+        app:layout_constraintBottom_toTopOf="@id/time_end"
+        app:layout_constraintEnd_toEndOf="@id/point_start"
+        app:layout_constraintStart_toStartOf="@id/point_start"
+        app:layout_constraintTop_toBottomOf="@id/point_start" />
+
+
+    <TextView
+        android:id="@+id/destination_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/spacing_extra_8dp"
+        android:text="Boston, MA"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/point_end"
+        app:layout_constraintStart_toEndOf="@id/point_end" />
+
+
+    <TextView
+        android:id="@+id/destination"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="South Station"
+        app:layout_constraintBottom_toTopOf="@+id/destination_detail"
+        app:layout_constraintStart_toStartOf="@id/destination_detail" />
+
+    <ImageView
+        android:layout_width="@dimen/size_30dp"
+        android:layout_height="@dimen/size_30dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
